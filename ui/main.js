@@ -17,3 +17,18 @@ var  button = document.getElementById('counter');
         request.open('GET', 'http://zaibmohd07.imad.hasura-app.io/counter',true);
         request.send(null);
     };
+    
+    var nameInput = document.getIdByElement('name');
+    var name = nameInput.value;
+    var submit = document.getElementById('submit_btn');
+    submit.onclcik = function() {
+        
+        var names = ['name1', 'name2', 'name3', 'name4'];
+        var list = '';
+        
+        for (var i=0 ;i< names.length; i++) {
+            list += '<li>' + names[i] + '</li>'; 
+            }
+        var ul = document.getElementById('namelsit');
+        ul.innerHTML = list;
+            };
